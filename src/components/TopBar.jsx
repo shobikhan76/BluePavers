@@ -19,7 +19,7 @@ const TopBar = () => {
       {/* Right: Social Icons */}
       <div className="flex gap-3 mt-2 md:mt-0">
         <a
-          href="https://www.facebook.com/profile.php?id=61580902232158&sk=about"
+          href="https://www.facebook.com/profile.php?id=61580902232158&sk"
           target="_blank"
           rel="noreferrer"
           className="bg-white p-2 rounded-full text-gray-900 hover:bg-blue-600 hover:text-white shadow-md transition transform hover:scale-110"
