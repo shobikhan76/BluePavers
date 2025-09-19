@@ -13,7 +13,7 @@ const TopBar = () => {
       {/* Center: Location */}
       <div className="flex items-center gap-2 text-center">
         <MapPin size={16} />
-        <span>22 KM Multan Road Lahore, 54000 Pakistan</span>
+        <span>Near Air university kamra, Hatian road Attock </span>
       </div>
 
       {/* Right: Social Icons */}
@@ -27,7 +27,7 @@ const TopBar = () => {
           <Facebook size={16} />
         </a>
         <a
-          href="https://twitter.com"
+          href="https://x.com/home?lang=en"
           target="_blank"
           rel="noreferrer"
           className="bg-white p-2 rounded-full text-gray-900 hover:bg-sky-500 hover:text-white shadow-md transition transform hover:scale-110"
@@ -35,7 +35,7 @@ const TopBar = () => {
           <Twitter size={16} />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/bluepavers"
           target="_blank"
           rel="noreferrer"
           className="bg-white p-2 rounded-full text-gray-900 hover:bg-pink-500 hover:text-white shadow-md transition transform hover:scale-110"

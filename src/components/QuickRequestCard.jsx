@@ -15,7 +15,7 @@ const QuickRequestCard = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://formspree.io/f/xjkeqkrn", {
+      const response = await fetch("https://formspree.io/f/mjkenrgq", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -1,89 +1,109 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png"; // Ideally replace this with a transparent logo.png
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="text-white p-4 flex justify-between items-center relative">
-      {/* Logo Section */}
-      <a
-        href="#home"
+    <header className="text-white px-4 py-3 flex items-center justify-between relative bg-transparent">
+      {/* Left: Logo */}
+      <Link
+        to="/"
         className="flex items-center gap-2 hover:opacity-80 transition-opacity"
       >
         <img
           src={logo}
           alt="Business Logo"
-          className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover ml-4 md:ml-8 shadow-lg 
-             hover:scale-110 hover:shadow-xl transition-all duration-300 ease-in-out"
+          className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 ease-in-out"
         />
-      </a>
+      </Link>
 
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex flex-1">
-        <ul className="flex justify-center gap-6 items-center flex-wrap">
+      {/* Center: Navigation (Desktop Only) */}
+      <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2">
+        <ul className="flex gap-6 items-center">
           <li>
-            <a href="#home" className="hover:text-gray-200 transition-colors">Home</a>
+            <Link to="/" className="hover:text-gray-200 transition-colors">
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#about" className="hover:text-gray-200 transition-colors">About</a>
+            <Link to="/about" className="hover:text-gray-200 transition-colors">
+              About
+            </Link>
+          </li>
+          {/* <li>
+            <Link to="/services" className="hover:text-gray-200 transition-colors">
+              Services
+            </Link>
+          </li> */}
+          <li>
+            <Link to="/products" className="hover:text-gray-200 transition-colors">
+              Products
+            </Link>
           </li>
           <li>
-            <a href="#services" className="hover:text-gray-200 transition-colors">Services</a>
+            <Link to="/gallery" className="hover:text-gray-200 transition-colors">
+              Gallery
+            </Link>
           </li>
           <li>
-            <a href="#products" className="hover:text-gray-200 transition-colors">Products</a>
-          </li>
-          <li>
-            <a href="#gallery" className="hover:text-gray-200 transition-colors">Gallery</a>
-          </li>
-          <li>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="text-white bg-blue-600 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 transition"
             >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
 
-      {/* Mobile Menu Button */}
+      {/* Right: Mobile Menu Button */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="md:hidden focus:outline-none mr-4"
+        className="md:hidden focus:outline-none z-20"
       >
         {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-black/90 text-white md:hidden shadow-lg">
+        <div className="absolute top-full left-0 w-full bg-black/90 text-white md:hidden shadow-lg z-10">
           <ul className="flex flex-col items-center gap-4 py-6">
             <li>
-              <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+              <Link to="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+              <Link to="/services" onClick={() => setMenuOpen(false)}>
+                Services
+              </Link>
             </li>
             <li>
-              <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
+              <Link to="/products" onClick={() => setMenuOpen(false)}>
+                Products
+              </Link>
             </li>
             <li>
-              <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
+              <Link to="/gallery" onClick={() => setMenuOpen(false)}>
+                Gallery
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="text-white bg-blue-600 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 transition"
               >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
