@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ const Contact = () => {
     <section id="contact" className="py-16 bg-gray-100">
       {/* Section Heading */}
       <motion.h2
-        className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-6"
+        className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -52,33 +52,42 @@ const Contact = () => {
         Contact Us
       </motion.h2>
 
-      {/* Contact Info */}
+      {/* Contact Info Section */}
       <motion.div
-        className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8 text-gray-800"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10 text-gray-700"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
         {/* Phone */}
         <a
           href="tel:+923149750409"
-          className="flex items-center gap-2 hover:text-blue-600 transition"
+          className="flex items-center gap-2 bg-white shadow-md px-4 py-3 rounded-xl hover:bg-blue-600 hover:text-white transition"
         >
-          <Phone size={20} />
-          <span className="font-medium">+92 314 9750409</span>
+          <Phone size={18} /> +92 314 9750409
         </a>
 
         {/* Email */}
         <a
           href="mailto:bluepavers7@gmail.com"
-          className="flex items-center gap-2 hover:text-blue-600 transition"
+          className="flex items-center gap-2 bg-white shadow-md px-4 py-3 rounded-xl hover:bg-blue-600 hover:text-white transition"
         >
-          <Mail size={20} />
-          <span className="font-medium">bluepavers7@gmail.com</span>
+          <Mail size={18} /> bluepavers7@gmail.com
+        </a>
+
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/923149750409"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 bg-green-500 text-white shadow-md px-4 py-3 rounded-xl hover:bg-green-600 transition"
+        >
+          <MessageCircle size={18} /> WhatsApp
         </a>
       </motion.div>
 
+      {/* Contact Form */}
       <div className="max-w-xl mx-auto">
         {!submitted ? (
           <motion.form

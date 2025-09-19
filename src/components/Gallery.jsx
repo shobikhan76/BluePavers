@@ -12,6 +12,12 @@ import g8 from "../assets/g8.jpg";
 import g9 from "../assets/g9.jpg";
 import g10 from "../assets/g10.jpg";
 import g11 from "../assets/g11.jpg";
+import g12 from "../assets/g12.jpg";
+import g15 from "../assets/g15.jpg";
+import g16 from "../assets/g16.jpg";
+import g18 from "../assets/g18.jpg";
+
+import g20 from "../assets/g20.jpg";
 
 const Gallery = () => {
   const images = [
@@ -26,6 +32,13 @@ const Gallery = () => {
     { id: 9, src: g9, alt: "Gallery Image 9" },
     { id: 10, src: g10, alt: "Gallery Image 10" },
     { id: 11, src: g11, alt: "Gallery Image 11" },
+    { id: 12, src: g12, alt: "Gallery Image 12" },
+    { id: 13, src: g15, alt: "Gallery Image 13" },
+    { id: 14, src: g16, alt: "Gallery Image 14" },
+    { id: 15, src: g18, alt: "Gallery Image 15" },
+    { id: 16, src: g20, alt: "Gallery Image 16" },
+    
+
   ];
 
   return (
