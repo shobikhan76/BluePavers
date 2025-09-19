@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram } from "lucide-react"; // ✅ Import social icons
 
 const Footer = () => {
   return (
@@ -40,17 +41,48 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Right - Contact Info */}
+        {/* Right - Contact Info + Social Icons */}
         <div className="flex flex-col items-center md:items-start gap-3">
+          {/* Phone */}
           <div className="flex items-center gap-2">
             <Phone size={18} />
             <a href="tel:+923149750409" className="hover:text-blue-400 transition">
               +92 314 9750409
             </a>
           </div>
+
+          {/* Location */}
           <div className="flex items-center gap-2">
             <MapPin size={18} />
             <span>Near Air University Kamra, Hatian Road, Attock</span>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-3 mt-3">
+            <a
+              href="https://www.facebook.com/profile.php?id=61580902232158"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white p-2 rounded-full text-gray-900 hover:bg-blue-600 hover:text-white shadow-md transition transform hover:scale-110"
+            >
+              <Facebook size={16} />
+            </a>
+            <a
+              href="https://x.com/home?lang=en"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white p-2 rounded-full text-gray-900 hover:bg-sky-500 hover:text-white shadow-md transition transform hover:scale-110"
+            >
+              <Twitter size={16} />
+            </a>
+            <a
+              href="https://www.instagram.com/bluepavers"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white p-2 rounded-full text-gray-900 hover:bg-pink-500 hover:text-white shadow-md transition transform hover:scale-110"
+            >
+              <Instagram size={16} />
+            </a>
           </div>
         </div>
       </div>
