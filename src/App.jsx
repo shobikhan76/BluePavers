@@ -32,10 +32,10 @@ export default function App() {
           <Route
             path="/"
             element={
-              <div className="relative h-[80vh] sm:h-[85vh] md:h-[90vh]">
+              <div className="relative h-[80vh] sm:h-[70vh] md:h-[80vh]">
                 <Swiper
                   modules={[Autoplay, Pagination]}
-                  autoplay={{ delay: 3000, disableOnInteraction: false }}
+                  autoplay={{ delay: 5000, disableOnInteraction: false }}
                   pagination={{ clickable: true }}
                   loop={true}
                   className="h-full"
