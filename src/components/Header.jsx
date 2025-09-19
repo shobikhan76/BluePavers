@@ -81,11 +81,11 @@ const Header = () => {
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/services" onClick={() => setMenuOpen(false)}>
                 Services
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/products" onClick={() => setMenuOpen(false)}>
                 Products
