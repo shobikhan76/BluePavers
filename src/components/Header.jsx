@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo11.png";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -69,43 +69,45 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-black/90 text-white md:hidden shadow-lg z-10">
-          <ul className="flex flex-col items-center gap-4 py-6">
-            <li>
-              <Link to="/" onClick={() => setMenuOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={() => setMenuOpen(false)}>
-                About
-              </Link>
-            </li>
-            {/* <li>
-              <Link to="/services" onClick={() => setMenuOpen(false)}>
-                Services
-              </Link>
-            </li> */}
-            <li>
-              <Link to="/products" onClick={() => setMenuOpen(false)}>
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" onClick={() => setMenuOpen(false)}>
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                onClick={() => setMenuOpen(false)}
-                className="text-white bg-blue-600 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 transition"
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
+        <div className="fixed inset-0 bg-black/90 text-white md:hidden shadow-lg z-50">
+          <div className="pt-28 px-6">
+            <ul className="flex flex-col items-start gap-6">
+              <li>
+                <Link to="/" onClick={() => setMenuOpen(false)}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => setMenuOpen(false)}>
+                  About
+                </Link>
+              </li>
+              {/* <li>
+                <Link to="/services" onClick={() => setMenuOpen(false)}>
+                  Services
+                </Link>
+              </li> */}
+              <li>
+                <Link to="/products" onClick={() => setMenuOpen(false)}>
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" onClick={() => setMenuOpen(false)}>
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-white bg-blue-600 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </header>

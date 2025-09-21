@@ -33,6 +33,14 @@ export default function App() {
             path="/"
             element={
               <div className="relative h-[80vh] sm:h-[70vh] md:h-[80vh]">
+                {/* Keep TopBar + Header mounted once so menu state persists */}
+                <div className="absolute inset-0 z-20 pointer-events-none">
+                  <div className="relative z-30 pointer-events-auto">
+                    <TopBar />
+                    <Header />
+                  </div>
+                </div>
+
                 <Swiper
                   modules={[Autoplay, Pagination]}
                   autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -49,11 +57,8 @@ export default function App() {
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-                        {/* Content */}
+                        {/* Content - only hero inner content; TopBar+Header are positioned above */}
                         <div className="relative z-10 flex flex-col h-full">
-                          <TopBar />
-                          <Header />
-
                           {/* Hero Content */}
                           <div className="flex-1 flex items-center justify-center px-4 sm:px-8">
                             <motion.div
